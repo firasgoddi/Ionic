@@ -1,0 +1,109 @@
+
+<ion-header>
+  <ion-navbar >
+
+    <font size="5" color="white">
+    <th>
+    <ion-title><font size="5" color="white">Coffe</font></ion-title> </th>
+
+
+    </font>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding class="getstart">
+<ion-slides pager>
+
+
+
+
+  <ion-slide  *ngFor="let o of offres2; let i = index">
+  <button ion-button  full (click)="nextpage();"><font size="3" color="white">Ajouter offre</font></button>
+    <ion-card>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <ion-img src="./img/sams.png"></ion-img>
+        </ion-avatar>
+        <h2>{{this.nomcoffe}}</h2>
+        <p>Hammam Sousse, 2016</p>
+
+      </ion-item>
+
+        <img src="./img/samsoff.png">
+          <ion-card-content>
+        <p>{{o.text}} </p>
+      </ion-card-content>
+      <button ion-button  full (click)="nxtpage(o._id);"><font size="3" color="white">Modifier offre</font></button>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-up'></ion-icon>
+            12 Likes
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='text'></ion-icon>
+            4 Comments
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='thumbs-down'></ion-icon>
+            4 Dislikes
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        phone
+      </ion-label>
+      <ion-input type="phone"  [(ngModel)]="phones" name="phones"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+        established
+      </ion-label>
+      <ion-input [(ngModel)]="establish" name="establish"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        adresse
+      </ion-label>
+      <ion-input value="hammam sousse"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        opening_hour
+      </ion-label>
+      <ion-input [(ngModel)]="opening" name="opening" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        closing_hour
+      </ion-label>
+      <ion-input  [(ngModel)]="closing" name="closing" ></ion-input>
+    </ion-item>
+
+
+
+
+</ion-slide>
+
+</ion-slides>
+</ion-content>

@@ -1,0 +1,78 @@
+<ion-header>
+
+</ion-header>
+  <ion-content padding class="getstart">
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+        Email
+      </ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+        Password
+      </ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>
+        <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+        Name
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="Name" name="Name"></ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Phone
+        </ion-label>
+        <ion-input type="text"[(ngModel)]="phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon item-start class="text-primary"></ion-icon>
+          Adresse
+        </ion-label>
+        <ion-input  type="text" [(ngModel)]="adr" name="adr"></ion-input>
+
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Opening Hour
+        </ion-label>
+        <ion-input type="phone" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          closing_hour
+        </ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <button ion-button (click)="takephoto()" full color="primary">take photo</button>
+
+      <button ion-button (click)="getimage()"full color="secondary">from libray</button>
+      <button ion-button (click)="cropImage()"full color="secondary">CroP image</button>
+      <button ion-button (click)="uploadImage()"full color="secondary">photo upload</button>
+      <p><img src="{{myphoto}}"></p>
+      <ion-item>
+        <p>{{imageURI}}</p>
+        <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+      </ion-item>
+      <ion-item>
+        <h4>Image Preview</h4>
+        <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="uploadFile()">Upload</button>
+      </ion-item>
+        <button ion-button icon-start block color="primary" tappable (click)="addcoffee(Name,password,phone,email,adresse)">
+        Save
+        </button>
+
+</ion-content>

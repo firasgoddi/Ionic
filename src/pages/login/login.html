@@ -1,0 +1,46 @@
+
+<ion-content padding class="getmap">
+
+	  <div class="login-content">
+
+	    <!-- Logo -->
+	    <div padding-horizontal text-center class="animated fadeInDown">
+	      <div class="logo"></div>
+	      <h2 ion-text class="text-primary">
+	        <strong>  <font size="6" color="white">Coffee In Touch</font></strong>
+	      </h2>
+	    </div>
+
+	    <!-- Login form -->
+			<div style="align:center">
+	    <form class="list-form">
+	      <ion-item>
+	        <ion-label floating>
+	          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+	          Email
+	        </ion-label>
+	        <ion-input [(ngModel)]="email" name='email' type="email"></ion-input>
+	      </ion-item>
+
+	      <ion-item>
+	        <ion-label floating>
+	          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+	          Password
+	        </ion-label>
+	        <ion-input [(ngModel)]="password" name='password' type="password"></ion-input>
+	      </ion-item>
+
+	    </form>
+
+	    <p text-right ion-text color="secondary" tappable (click)="register()"><strong>Inscriez Vous?</strong></p>
+
+	    <div>
+	      <button ion-button icon-start block color="dark" tappable (click)="login(email,password)">
+	        <ion-icon name="log-in"></ion-icon>
+	      Login
+	      </button>
+	  </div>
+	</div>
+</div>
+
+</ion-content>
